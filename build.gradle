@@ -13,6 +13,7 @@ group 'straightway'
 version '0.1-SNAPSHOT'
 
 apply plugin: 'kotlin'
+apply plugin: 'maven'
 
 repositories {
     mavenCentral()
@@ -21,6 +22,14 @@ repositories {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testCompile "org.junit.jupiter:junit-jupiter-api:5.0.0-M4"
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file://" + file("../repo"))
+        }
+    }
 }
 
 compileKotlin {
