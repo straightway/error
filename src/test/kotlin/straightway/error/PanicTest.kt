@@ -30,9 +30,9 @@ internal class PanicTest {
     @Test
     fun isThrowable() {
         try {
-            throw Panic("Aaaargh!")
+            throw Panic("I am in panic!")
         } catch (panic: Panic) {
-            assertEquals("Panic: Aaaargh!", panic.toString())
+            assertEquals("Panic: I am in panic!", panic.toString())
         }
     }
 
