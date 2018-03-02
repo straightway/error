@@ -20,5 +20,5 @@ To include this library in a gradle build, add
 Then you can simply configure in your dependencies:
 
     dependencies {
-        compile "straightway:error:0.1+"
+        compile "straightway:error:0.3+"
     }
